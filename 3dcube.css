@@ -72,9 +72,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-40px, -40px);
-    perspective: 1000px;
+    perspective: 10000px;
 
-    -webkit-perspective: 500px;
+    -webkit-perspective: 800px;
     -webkit-perspective-origin: 50% -240px;
 }
 
@@ -90,6 +90,7 @@ figure {
     height: 80px;
     background-color: #60c2ef;
     opacity: .5;
+    border: 1px solid black;
 
     -webkit-transform-origin: 50% 50% 0;
 }
@@ -128,7 +129,6 @@ figure:after {
 .bottom {
     -webkit-transform: rotateX(-90deg) translateZ(40px);
     -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
-    /background-color: rgba(0, 0, 0, 0);
 }
 
 .left { -webkit-transform: rotateY(-90deg) translateZ(40px); }

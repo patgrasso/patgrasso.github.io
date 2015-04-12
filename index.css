@@ -16,6 +16,16 @@ body {
     background-color: #ff9c3a;
 }
 
+code {
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+.spec {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+
 
 /* Styles for the side navbar */
 
@@ -45,6 +55,7 @@ ul {
 li {
     font-size: 25px;
     font-weight: 300;
+    margin-bottom: 5px;
 }
 
 a {
@@ -74,14 +85,14 @@ main > header {
     text-align: center;
 }
 
-article {
+section {
     background-color: #474747;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
 }
 
-article p {
+section p {
     font-size: 20px;
 }
 
@@ -104,6 +115,7 @@ header > h1 {
 
 
 /* To-the-top arrow */
+
 div#top-arrow {
     position: fixed;
     bottom: 10px;
@@ -143,4 +155,20 @@ div.down-arrow {
     display: inline-block;
     position: absolute;
     bottom: 40px;
+}
+
+
+/* Projects Section */
+
+article.project {
+    width: 20%;
+    height: 300px;
+    padding: 10px;
+    background-color: #57be41;
+    border-radius: 10px;
+}
+
+article.project > h3 {
+    font-size: 25px;
+    text-align: center;
 }
