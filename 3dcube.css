@@ -1,0 +1,152 @@
+/* Thanks to Donovan Hutchinson for the tutorial on 3D graphics in CSS */
+
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotateY(0); }
+    100% { -webkit-transform: rotateY(360deg); }
+}
+
+@-webkit-keyframes frontShading1 {
+    2% { opacity: 0; }
+    25% { opacity: 0.8; }
+    35% { opacity: 0.8; }
+    50% { opacity: 0; }
+}
+
+@-webkit-keyframes frontShading2 {
+    50% { opacity: 0; }
+    60% { opacity: 0.8; }
+    75% { opacity: 0.8%; }
+    100% {opacity: 0; }
+}
+
+@-webkit-keyframes backShading1 {
+    25% { opacity: 0.8; }
+    50% { opacity: 0; }
+    75% { opacity: 0; }
+    80% { opacity: 0.8; }
+}
+
+@-webkit-keyframes backShading2 {
+    25% { opacity: 0; }
+    50% { opacity: 0; }
+    75% { opacity: 0.8; }
+    80% { opacity: 0.8; }
+}
+
+@-webkit-keyframes leftShading1 {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  50% { opacity: 0.8; }
+  60% { opacity: 0.8; }
+}
+
+@-webkit-keyframes leftShading2 {
+  0% { opacity: 0.8; }
+  25% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+
+@-webkit-keyframes rightShading2 {
+  50% { opacity: 0.8; }
+  75% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes rightShading1 {
+  10% { opacity: 0.8; }
+  50% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 0.8; }
+}
+
+@-webkit-keyframes rotateTop {
+    0% { -webkit-transform: rotateZ(0); }
+    100% { -webkit-transform: rotateZ(360deg); }
+}
+
+.stage {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40px, -40px);
+    perspective: 1000px;
+
+    -webkit-perspective: 500px;
+    -webkit-perspective-origin: 50% -240px;
+}
+
+.cube {
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation: rotate 10s infinite linear;
+}
+
+figure {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #60c2ef;
+    opacity: .5;
+
+    -webkit-transform-origin: 50% 50% 0;
+}
+
+figure:before, figure:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+figure:before {
+    background: -webkit-radial-gradient(top left, rgba(0, 0, 0, 0.5), #000);
+}
+
+figure:after {
+    background: -webkit-radial-gradient(top right, rgba(0, 0, 0, 0.5), #000);
+}
+
+.front { -webkit-transform: translateZ(40px); }
+
+.front:before { -webkit-animation: frontShading1 10s infinite linear; }
+
+.front:after { -webkit-animation: frontShading2 10s infinite linear; }
+
+.back { -webkit-transform: rotateY(180deg) translateZ(40px); }
+
+.back:before { -webkit-animation: backShading1 10s infinite linear; }
+
+.back:after { -webkit-animation: backShading2 10s infinite linear; }
+
+.top { -webkit-transform: rotateX(90deg) translateZ(40px); }
+
+.bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(40px);
+    -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+    /background-color: rgba(0, 0, 0, 0);
+}
+
+.left { -webkit-transform: rotateY(-90deg) translateZ(40px); }
+
+.left:before { -webkit-animation: leftShading1 10s infinite linear; }
+
+.left:after { -webkit-animation: leftShading2 10s infinite linear; }
+
+.right { -webkit-transform: rotateY(90deg) translateZ(40px); }
+
+.right:before { -webkit-animation: rightShading1 10s infinite linear; }
+
+.right:after { -webkit-animation: rightShading2 10s infinite linear; }
+
+
+
+#cube .face {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
