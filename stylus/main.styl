@@ -36,6 +36,7 @@ nav, main
   color white
   vertical-align top
 
+
 nav
   position fixed
   width 300px
@@ -43,6 +44,14 @@ nav
 
   h1
     margin-left 3px
+
+  @media screen and (max-width: 850px)
+    display none
+    width 100%
+    position relative
+
+
+
 
 h1
   font-weight 300
@@ -57,7 +66,7 @@ li
   font-size 25px
   font-weight 300
 
-  &, /.name-tag, /#btn-welcome
+  &, /.name-tag
     width           -webkit-fit-content
     width           -moz-fit-content
     cursor          pointer
@@ -75,6 +84,9 @@ main
     position relative
     height 100%
     text-align center
+
+  @media screen and (max-width: 850px)
+    margin-left 0
 
 section
   background-color #f49c12
@@ -105,3 +117,6 @@ header > h1
   height 150px
   position relative
   padding 1px
+
+
+
