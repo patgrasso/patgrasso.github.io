@@ -1,0 +1,34 @@
+{
+  "name": "patgrasso",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-stylus": "^2.1.1",
+    "gulp-watch": "^4.3.5",
+    "jade": "^1.11.0",
+    "stylus": "^0.53.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-stylus": "^2.1.1",
+    "gulp-watch": "^4.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patgrasso/patgrasso.github.io.git"
+  },
+  "author": "Patrick Grasso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patgrasso/patgrasso.github.io/issues"
+  },
+  "homepage": "https://github.com/patgrasso/patgrasso.github.io#readme"
+}

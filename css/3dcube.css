@@ -90,7 +90,7 @@ figure {
     height: 80px;
     background-color: #60c2ef;
     opacity: .5;
-    border: 1px solid black;
+    border: 1px solid rgba(4, 106, 156, .01);
 
     -webkit-transform-origin: 50% 50% 0;
 }
