@@ -6,9 +6,11 @@ html(lang='en-US')
     link(href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css')
     link(rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
-    link(rel='stylesheet' type='text/css' href='css/main.css')
     link(rel='stylesheet' type='text/css' href='css/shaper.css')
-    link(rel='stylesheet' type='text/css' href='css/cityr.css')
+    link(rel='stylesheet' type='text/css' href='css/main.css')
+
+    block css
+
     script(type='text/javascript' src='bower_components/jquery/dist/jquery.min.js')
     script(type='text/javascript' src='js/snap.svg-min.js')
     script(data-main='js/main' src='bower_components/requirejs/require.js')
@@ -16,45 +18,15 @@ html(lang='en-US')
     nav
       h1.name-tag
         div.iso-raise.iso-hover.iso-emerald
-          a(href='main.html') Pat Grasso
+          a(href='index.html') Pat Grasso
       ul
         li.iso-raise.iso-hover.iso-emerald: a(href='about.html') About
         li.iso-raise.iso-hover.iso-emerald: a(href='projects.html') Projects
         li.iso-raise.iso-hover.iso-emerald: a(href='#stuff') Stuff
         li.iso-raise.iso-hover.iso-emerald: a(href='#morestuff') More Stuff
         li.iso-raise.iso-hover.iso-emerald: a(href='#section') Section
-      a(href='#top')
-        div#top-arrow.arrow-icon(hidden): i.fa.fa-arrow-up
     main#top
-      header
-        h1
-          div#btn-welcome.big-text.iso-raise.iso-press.iso-alizarin
-            i.fa.fa-bolt(style='color: yellow') Welcome!
-            i.fa.fa-bolt(style='color: yellow')
-        div.stage
-          svg#city
-            defs
-              pattern#pat-sidewalk-v(patternUnits='userSpaceOnUse' width='10' height='10')
-                rect(width='50' height='10' fill='#f5f1de')
-                rect(width='50' height='1' fill='#d5d1be')
-              pattern#pat-sidewalk-h(patternUnits='userSpaceOnUse' width='10' height='10')
-                rect(width='10' height='50' fill='#f5f1de')
-                rect(width='1' height='50' fill='#d5d1be')
-
-            // sidewalks
-            rect(x='130' y='0' width='50' height='600' fill='url(#pat-sidewalk-v)')
-            rect(x='330' y='0' width='50' height='330' fill='url(#pat-sidewalk-v)')
-            rect(x='0' y='160' width='600' height='50' fill='url(#pat-sidewalk-h)')
-            rect(x='0' y='310' width='600' height='50' fill='url(#pat-sidewalk-h)')
-
-            // roads
-            rect(x='140' y='0' width='30' height='600')
-            rect(x='340' y='0' width='30' height='320')
-            rect(x='0' y='170' width='600' height='30')
-            rect(x='0' y='320' width='600' height='30')
-
-      section(id='about')
-        h2 About
+      block main
     //
       <section id="about">
         <h2>About Me</h2>
@@ -83,5 +55,4 @@ html(lang='en-US')
       <section id="section">
         <h2>Section</h2>
       </section>
-    script(type='text/javascript' src='js/city.js')
-    script(type='text/javascript' src='js/city-layout.js')
+    block scripts

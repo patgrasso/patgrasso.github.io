@@ -1,0 +1,18 @@
+section {
+  background-color: #e67e22;
+}
+a[target=_blank] {
+  text-decoration: underline;
+}
+.blue-box {
+  border: 3px solid #34495e;
+  color: #34495e;
+}
+.red-box {
+  border: 3px solid #c0392b;
+  color: #c0392b;
+}
+.brown-text,
+.brown-text i {
+  color: #795548;
+}
