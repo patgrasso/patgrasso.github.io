@@ -1,0 +1,88 @@
+@import 'colors'
+
+
+main:last-child
+  margin-bottom 10px
+
+
+
+section
+  background-color #e74c3c//#f4511e//#8e44ad
+
+  @media screen and (max-width: 850px)
+    margin-left 10px
+  @media screen and (max-width: 525px)
+    p
+      font-size 14px
+
+.row
+  vertical-align top
+  display flex
+  flex-flow row wrap
+  justify-content space-between
+  align-items center
+
+  > *
+    margin-right 20px
+
+    &:last-of-type
+      margin-right 0
+
+  .center
+    margin 0 auto
+    margin-top 10px
+    margin-bottom 25px
+
+  @media screen and (max-width: 750px)
+    flex-flow column nowrap
+
+    & > section
+      order -1
+      margin-right 0
+
+
+
+a[target=_blank]
+  text-decoration underline
+
+
+.fa-github:hover
+  color black
+
+
+section ul
+  margin-left 20px
+  padding-left 20px
+  list-style square
+
+  li
+    font-size 20px
+    padding 3px
+
+.image-row
+  text-align center
+
+  img
+    display inline-block
+    padding 0 20px
+
+
+.raise-demo-1
+  position relative
+  width 100px
+  height 100px
+  padding 0
+
+.raise-demo-2
+  position absolute
+  width 75px
+  height 75px
+  margin 3px 0 0 23px
+  padding 0
+
+.raise-demo-3
+  position absolute
+  width 50px
+  height 50px
+  margin 5px 45px
+  padding 0

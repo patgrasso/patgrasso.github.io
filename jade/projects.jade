@@ -1,0 +1,75 @@
+extends ./main.jade
+
+block css
+  link(rel='stylesheet' href='css/projects.css')
+  link(rel='stylesheet' href='css/3dcube.css')
+
+block main
+  section.iso-raise.iso-legs
+    h2 Projects 
+      a(target='_blank' href='https://github.com/patgrasso'): i.fa.fa-github
+    p Here are some of my personal projects. Everything here and more can be 
+      a.yellow-box(target='_blank' href='https://github.com/patgrasso') viewed on github 
+        i.fa.fa-github-alt
+  div.row
+    section.dark-amber-back.iso-raise.iso-legs
+      h2 BoxChat
+      p Boxchat is a NodeJS and socket.io powered chat client built for teams.
+      p (Similar to Slack)
+      ul.project-specs
+        li
+          a.green-box(target='_blank' href='https://nodejs.org') Node.js
+          |  and 
+          a.cloud-box(target='_blank' href='http://expressjs.com') Express
+          |  run the server
+        li
+          a.amethyst-box(target='_blank' href='http://socket.io') Socket.io
+          |  allows real time client-server communication
+        li 
+          a.black-box(target='_blank' href='http://passportjs.org') Passport
+          |  handles authentication
+        li 
+          a.green-box(target='_blank' href='https://mongodb.org') MongoDB
+          |  used to store chat logs, user data, etc.
+      div.image-row
+        img(src='images/js.jpg' height='70px')
+        img(src='images/mongodb.png' height='70px')
+        img(src='images/nodejs.svg' height='70px')
+    div.stage.center
+      div.cube
+        figure.front
+        figure.back
+        figure.right
+        figure.left
+        figure.top
+        figure.bottom
+  div.row
+    div.center.iso-raise.iso-turquoise.raise-demo-1
+      div.iso-raise.iso-emerald.raise-demo-2
+      div.iso-raise.iso-alizarin.raise-demo-3
+    section.cloud-back.iso-raise.iso-legs
+      h2 Personal Website
+      p This website!
+      ul.project-specs
+        li
+          a.coral-box(target='_blank' href='http://stylus-lang.com') Stylus
+          |  used for styling
+        li
+          a.emerald-box(target='_blank' href='http://jade-lang.com') Jade
+          |  used for templating
+        li
+          a.gulp-red-box(target='_blank' href='http://gulpjs.com') Gulp
+          |  running watch and compile tasks
+      div.image-row
+        img(src='images/gulp.png' height='50px')
+        img(src='images/jade.svg' height='50px')
+        img(src='images/stylus.svg' height='50px')
+
+  div.row
+    section.cyan-back.iso-raise.iso-legs
+      h2 Course Scheduler
+      p The initial implementation, done in 
+        span.yellow-box Python
+        | , was done to help students craft different schedules with a set of
+        | desired courses such that sections did not conflict. Now it exists as
+        | a web application (in progress) with several additional features.

@@ -36,12 +36,21 @@ nav h1 {
 nav li {
   font-size: 25px;
   font-weight: 300;
-  padding-left: 0;
-  padding-right: 0;
 }
-nav li a {
-  padding-left: 5px;
-  padding-right: 5px;
+nav li,
+nav h1 > div {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+nav a {
+  line-height: 1.5;
+  z-index: 1;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-left: -10px;
+  margin-bottom: -10px;
 }
 nav ul,
 nav li,
@@ -82,7 +91,7 @@ nav .btn-menu {
     z-index: 6;
     position: fixed;
     right: 10px;
-    top: 40px;
+    top: 10px;
     display: initial;
 /*
   @media screen and (max-device-width: 850px)

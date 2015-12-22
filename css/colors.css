@@ -142,25 +142,3 @@
 .brown-text i {
   color: #6d4c41;
 }
-section {
-  background-color: #f57f17;
-}
-@media screen and (max-width: 850px) {
-  section {
-    margin-left: 10px;
-  }
-}
-@media screen and (max-width: 525px) {
-  section p {
-    font-size: 14px;
-  }
-}
-a[target=_blank] {
-  text-decoration: underline;
-}
-.fa.fa-facebook-square:hover {
-  color: #3b5998;
-}
-.fa.fa-linkedin-square:hover {
-  color: #0077b5;
-}

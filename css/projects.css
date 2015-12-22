@@ -142,8 +142,11 @@
 .brown-text i {
   color: #6d4c41;
 }
+main:last-child {
+  margin-bottom: 10px;
+}
 section {
-  background-color: #f57f17;
+  background-color: #e74c3c;
 }
 @media screen and (max-width: 850px) {
   section {
@@ -155,12 +158,72 @@ section {
     font-size: 14px;
   }
 }
+.row {
+  vertical-align: top;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row > * {
+  margin-right: 20px;
+}
+.row > *:last-of-type {
+  margin-right: 0;
+}
+.row .center {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 750px) {
+  .row {
+    flex-flow: column nowrap;
+  }
+  .row > section {
+    order: -1;
+    margin-right: 0;
+  }
+}
 a[target=_blank] {
   text-decoration: underline;
 }
-.fa.fa-facebook-square:hover {
-  color: #3b5998;
+.fa-github:hover {
+  color: #000;
 }
-.fa.fa-linkedin-square:hover {
-  color: #0077b5;
+section ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  list-style: square;
+}
+section ul li {
+  font-size: 20px;
+  padding: 3px;
+}
+.image-row {
+  text-align: center;
+}
+.image-row img {
+  display: inline-block;
+  padding: 0 20px;
+}
+.raise-demo-1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+.raise-demo-2 {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  margin: 3px 0 0 23px;
+  padding: 0;
+}
+.raise-demo-3 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 5px 45px;
+  padding: 0;
 }
