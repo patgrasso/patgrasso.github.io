@@ -65,6 +65,25 @@
   right: 5px;
   transform: skewX(-45deg);
 }
+@media screen and (max-device-width: 850px) {
+  .iso-raise {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 1vw;
+  }
+  .iso-raise:before {
+    width: 2vw;
+    top: 1vw;
+    bottom: -1vw;
+    left: -2vw;
+  }
+  .iso-raise:after {
+    height: 2vw;
+    bottom: -2vw;
+    left: -1vw;
+    right: 1vw;
+  }
+}
 .iso-hover:hover {
   margin-left: 10px;
   margin-top: -10px;

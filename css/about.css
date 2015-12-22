@@ -1,5 +1,15 @@
 section {
-  background-color: #e67e22;
+  background-color: #f57f17;
+}
+@media screen and (max-width: 850px) {
+  section {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 525px) {
+  section p {
+    font-size: 14px;
+  }
 }
 a[target=_blank] {
   text-decoration: underline;
@@ -9,10 +19,10 @@ a[target=_blank] {
   color: #34495e;
 }
 .red-box {
-  border: 3px solid #c0392b;
-  color: #c0392b;
+  border: 3px solid #b71c1c;
+  color: #b71c1c;
 }
 .brown-text,
 .brown-text i {
-  color: #795548;
+  color: #6d4c41;
 }

@@ -1,6 +1,7 @@
 doctype html
 html(lang='en-US')
   head
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     title Pat Grasso
     link(href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400|Roboto:100,400' rel='stylesheet' type='text/css')
     link(href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css')
@@ -14,8 +15,11 @@ html(lang='en-US')
     script(type='text/javascript' src='bower_components/jquery/dist/jquery.min.js')
     script(type='text/javascript' src='js/snap.svg-min.js')
     script(data-main='js/main' src='bower_components/requirejs/require.js')
-  body
+  body(ontouchstart='')
+    div.overlay
     nav
+      div.iso-raise.iso-emerald.btn-menu
+        i.fa.fa-bars
       h1.name-tag
         div.iso-raise.iso-hover.iso-emerald
           a(href='index.html') Pat Grasso

@@ -174,9 +174,6 @@ function createBuilding(x, y, length, width, height, options) {
 
 
 
-document.getElementById('btn-welcome').onclick = function () {
+$('#btn-welcome').on('click tap', function () {
   toggleCityLights();
-};
-
-
-
+});

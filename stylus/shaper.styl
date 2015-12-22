@@ -64,6 +64,21 @@
     right            5px
     transform       skewX(-45deg)
 
+  @media screen and (max-device-width: 850px)
+    padding-left    2vw
+    padding-right   2vw
+    padding-bottom  1vw
+    &:before
+      width          2vw
+      top            1vw
+      bottom        -1vw
+      left          -2vw
+    &:after
+      height         2vw
+      bottom        -2vw
+      left          -1vw
+      right          1vw
+
 .iso-hover:hover
   margin-left        10px
   margin-top        -10px

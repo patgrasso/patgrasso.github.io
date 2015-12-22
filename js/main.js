@@ -57,4 +57,12 @@ require([], function () {
     $('html,body').on('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function () {
         $(this).stop();
     });
+
+    $('.btn-menu, .overlay').on('click tap', function () {
+      if ($('.name-tag, nav ul').hasClass('show')) {
+        $('.name-tag, nav ul, .overlay').removeClass('show');
+      } else {
+        $('.name-tag, nav ul, .overlay').addClass('show');
+      }
+    });
 });
