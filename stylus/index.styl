@@ -1,0 +1,151 @@
+
+primary   = #388e3c
+secondary = #ffa000
+
+body, main, header
+  background-color rgba(0, 0, 0, .4)
+
+  @media screen and (max-device-width: 800px)
+    background-color primary
+
+body.hide-video
+  &, main, header
+    background-color transparent
+
+html
+  background-color primary
+
+nav
+  span
+    color #000
+
+.navbar-custom
+  @media screen and (max-device-width: 800px)
+    background-color primary
+    border-bottom 1px solid #fff
+
+  background-color transparent
+
+  .navbar-toggle
+    border none
+    font-size 18px
+    margin-top 3px
+    margin-bottom 3px
+    &:hover, &:focus
+      background-color transparent
+      border-color #fff
+
+  .navbar-nav li
+    a:hover
+      color secondary
+    &.active
+      a, a:hover, a:focus
+        background-color secondary
+        color #fff
+
+header
+  height 100vh
+  .center
+    position relative
+    top 50%
+    transform translateY(-50%)
+
+.profile-icon
+  color #fff
+  font-size 50px
+  margin 15px
+
+
+// background video
+#bg-vid
+  @media screen and (max-device-width: 800px)
+    display none
+
+  video
+    width 100%
+    background-size cover
+    position fixed
+    min-height 100%
+    min-width 100%
+    top 50%
+    left 50%
+    width auto
+    height auto
+    z-index -100
+    transform translateX(-50%) translateY(-50%)
+
+  .video-controls
+    position fixed
+    bottom 0
+    right 20px
+    color #fff
+    font-size 20px
+    z-index 1000
+
+    i
+      margin 20px
+      &:hover
+        cursor pointer
+
+
+// sections
+section *
+  color #fff
+
+hr.star-light
+  border-top solid 5px
+  position relative
+  max-width 105px
+  transform translateX(-72px)
+
+  &:before
+    content ''
+    position absolute
+    border-top solid 5px
+    color #fff
+    max-width 105px
+    right -145px
+    height 100%
+    width 100%
+    margin-top -5px
+
+  &:after
+    background-color transparent
+    margin-left 105px
+    z-index 12
+
+
+// projects
+.project-item
+  padding 15px
+  margin 15px 0
+  width auto
+
+  .title
+    text-align center
+    margin-top 0
+
+    a:hover, a:focus
+      color #fff
+
+#boxchat
+  background-color #e64a19
+
+#nyota
+  background-color #388e3c
+
+  @media screen and (max-device-width: 800px)
+    border 2px solid #fff
+    padding 13px
+
+  /.hide-video &
+    border 2px solid #fff
+    padding 13px
+
+#journ
+  background-color #039be5
+
+#kitti
+  background-color #8e24aa
+
+

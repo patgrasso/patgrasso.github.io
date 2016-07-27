@@ -3,60 +3,30 @@ html(lang='en-US')
   head
     meta(name='viewport' content='width=device-width, initial-scale=1')
     title Pat Grasso
-    link(href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400|Roboto:100,400' rel='stylesheet' type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css')
-    link(href='http://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css')
-    link(rel='stylesheet' href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
-    link(rel='stylesheet' type='text/css' href='css/shaper.css')
-    link(rel='stylesheet' type='text/css' href='css/main.css')
 
+    link(
+      rel='stylesheet'
+      href='https://fonts.googleapis.com/css?family=Montserrat:400,700'
+    )
+    link(
+      rel='stylesheet'
+      href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic'
+    )
+    link(rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='vendor/freelancer/css/freelancer.min.css')
     block css
+  body#page-top.index
+    include nav
+    block content
 
     script(type='text/javascript' src='bower_components/jquery/dist/jquery.min.js')
-    script(type='text/javascript' src='js/snap.svg-min.js')
-    script(data-main='js/main' src='bower_components/requirejs/require.js')
-  body(ontouchstart='')
-    div.overlay
-    nav
-      div.iso-raise.iso-emerald.btn-menu
-        i.fa.fa-bars
-      h1.name-tag
-        div.iso-raise.iso-hover.iso-emerald
-          a(href='/') Pat Grasso
-      ul
-        li.iso-raise.iso-hover.iso-emerald: a(href='about.html') About
-        li.iso-raise.iso-hover.iso-emerald: a(href='projects.html') Projects
-        li.iso-raise.iso-hover.iso-emerald: a(href='#stuff') Stuff
-        li.iso-raise.iso-hover.iso-emerald: a(href='#morestuff') More Stuff
-        li.iso-raise.iso-hover.iso-emerald: a(href='#section') Section
-    main#top
-      block main
-    //
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Hey there! My name is Patrick. I'm a Computer Science student with a passion for
-           learning new technologies.</p>
-      </section>
-      <section id="projects">
-        <h2>Projects</h2>
-        <article id="boxchat" class="project">
-          <h3>boxchat</h3>
-          <p>Boxchat is a NodeJS and socket.io powered chat client built for teams.</p>
-          <p class="spec">NodeJS</p>
-        </article>
-        <article id="scheduler" class="project">
-          <h3>course scheduler</h3>
-          <p>Boxchat is a NodeJS and socket.io powered chat client built for teams.</p>
-          <p class="spec">NodeJS</p>
-        </article>
-      </section>
-      <section id="stuff">
-        <h2>Stuff</h2>
-      </section>
-      <section id="morestuff">
-        <h2>More Stuff</h2>
-      </section>
-      <section id="section">
-        <h2>Section</h2>
-      </section>
+    script(
+      type='text/javascript'
+      src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
+    )
+    script(type='text/javascript' src='bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(type='text/javascript' src='vendor/freelancer/js/jqBootstrapValidation.js')
+    script(type='text/javascript' src='vendor/freelancer/js/contact_me.js')
+    script(type='text/javascript' src='vendor/freelancer/js/freelancer.min.js')
     block scripts

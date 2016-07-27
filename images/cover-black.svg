@@ -1,0 +1,57 @@
+<svg
+  width="302"
+  height="302"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <g id="palm-tree">
+      <line x1="15" y1="5" x2="15" y2="55" />
+      <path d="M0,5 C15,0 20,5 30,15" />
+      <path d="M0,15 C10,5 15,0 30,5" />
+    </g>
+
+    <g id="cloud">
+      <path d="M0,0 c4,0 4,3 8,3
+                    c4,0 4,-3 8,-3
+                    c4,0 4,3 8,3
+                    c4,0 4,-3 8,-3
+                    c4,0 4,3 8,3" />
+    </g>
+  </defs>
+
+  <g transform="translate(1,1)" stroke-width="2" fill="none" stroke="#000">
+    <polygon
+      points="150,300 280,225 280,75 150,0 20,75 20,225"
+      id="border" />
+
+    <g id="sun" fill="none">
+      <path d="M115,20 L150,0 L185,20" />
+      <path d="M115,20 C115,60 185,60 185,20" />
+    </g>
+
+    <line id="horizon" x1="20" y1="195" x2="280" y2="195" />
+
+    <g id="trees">
+      <use x="40" y="150" xlink:href="#palm-tree" />
+      <use x="80" y="170" xlink:href="#palm-tree" />
+      <use x="190" y="170" xlink:href="#palm-tree" />
+      <use x="230" y="150" xlink:href="#palm-tree" />
+    </g>
+
+    <g id="clouds">
+      <use x="60" y="110" xlink:href="#cloud" />
+      <use x="80" y="80" xlink:href="#cloud" />
+      <use x="200" y="95" xlink:href="#cloud" />
+    </g>
+
+    <g id="wave">
+      <path d="M120,195 C160,165 140,152 135,155" />
+      <path d="M135,155 C127,157 132,170 138,161" />
+
+      <path d="M190,195 C170,185 160,140 137,143" />
+      <path d="M137,143 C115,147 120,175 137,170" />
+      <path d="M137,170 C139,169 142,167 144,163" />
+    </g>
+  </g>
+</svg>

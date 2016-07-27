@@ -1,42 +1,37 @@
-extends ./main.jade
-
-block css
-  link(rel="stylesheet" href="css/about.css")
-
-block main
-  section.iso-raise.iso-legs
-    h2 About 
-      a(target='_blank' href='https://facebook.com/bluesledmaster'): i.fa.fa-facebook-square
-      |  
-      a(target='_blank' href='https://linkedin.com/in/patrick-grasso-9b36778a'): i.fa.fa-linkedin-square
-    p I am currently a Junior pursuing a Bachelor of Science degree in
+section#about.container
+  div.row
+    div.col-lg-12.text-center
+      h2 About
+      hr.star-light
+  div.row
+    p.col-lg-4.col-lg-offset-2
+      | I am currently a Junior pursuing a Bachelor of Science degree in
       | Computer Science at Stevens Institute of Technology.
-    br
-    p I have a particular interest for 
-      span.blue-box full-stack web development
-      | , including everything from database interfacing to front-end design.
-    br
-    p Much of my personal experience has been with 
-      span.blue-box JavaScript/Node.js
-      |  and various frameworks,
-      | however my professional experience at 
-      a.red-box(target='_blank' href='http://icims.com') iCIMS
-      |  has consisted mostly of 
-      span.brown-text Java 
-        i.fa.fa-coffee
-      | .
-    br
-    p For the past year (two semesters) I have been the 
-      span.red-box teaching assistant
-      |  for CS 385 - Algorithms at Stevens.
-    br
-    p I have competed twice now (2014 and 2015) in the ACM International
-      | Collegiate Programming Contest, representing Stevens.
-    br
-    p From these experiences and many more, I have developed an understanding
-      | and appreciation for the beauty of various types of algorithms and data
-      | structures as well as a knack for identifying and comparing solutions
-      | to problems. I have a passion for learning concepts, frameworks, and
-      | various technologies that allow me to create software, whether it be a
-      | system program that interacts with an external device, or a web
-      | application with an aesthetically appealing user interface.
+    p.col-lg-4
+      | I have experience with web development throughout the stack, from
+      | database modeling, to CMS, to front-end design.
+//
+  p Much of my personal experience has been with 
+    span.blue-box JavaScript/Node.js
+    |  and various frameworks,
+    | however my professional experience at 
+    a.red-box(target='_blank' href='http://icims.com') iCIMS
+    |  has consisted mostly of 
+    span.brown-text Java 
+      i.fa.fa-coffee
+    | .
+  br
+  p For the past year (two semesters) I have been the 
+    span.red-box teaching assistant
+    |  for CS 385 - Algorithms at Stevens.
+  br
+  p I have competed twice now (2014 and 2015) in the ACM International
+    | Collegiate Programming Contest, representing Stevens.
+  br
+  p From these experiences and many more, I have developed an understanding
+    | and appreciation for the beauty of various types of algorithms and data
+    | structures as well as a knack for identifying and comparing solutions
+    | to problems. I have a passion for learning concepts, frameworks, and
+    | various technologies that allow me to create software, whether it be a
+    | system program that interacts with an external device, or a web
+    | application with an aesthetically appealing user interface.

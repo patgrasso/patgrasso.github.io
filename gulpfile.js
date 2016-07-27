@@ -1,11 +1,15 @@
-var gulp    = require('gulp');
-var jade    = require('gulp-jade');
-var stylus  = require('gulp-stylus');
-var watch   = require('gulp-watch');
-var plumber = require('gulp-plumber');
+const gulp    = require('gulp');
+const jade    = require('gulp-jade');
+const stylus  = require('gulp-stylus');
+const watch   = require('gulp-watch');
+const plumber = require('gulp-plumber');
+
+let   views   = [
+  'index'
+].map((name) => `jade/${name}.jade`);
 
 gulp.task('default', function () {
-  gulp.src('jade/*.jade')
+  gulp.src(views)
     .pipe(plumber())
     .pipe(jade({ pretty: true }))
     .pipe(gulp.dest('./'));
