@@ -47,7 +47,7 @@ function resizeBackground() {
 
     if (preference == null) {
       localStorage.setItem('videoPlayPreference', 'on');
-      preference = true;
+      preference = 'on';
     }
 
     if (preference === 'on') {
