@@ -49,15 +49,19 @@ nav
 header
   height 100vh
   position relative
+
   .center
     position relative
     top 50%
     transform translateY(-50%)
 
-    @media screen and (max-height: 600px) and (max-width: 768px)
-      margin-top 60px
-      ^
-        height calc(100vh - 60px)
+    @media screen and (max-width: 768px)
+      .logo
+        max-width 200px
+
+    @media screen and (max-height: 368px)
+      .logo
+        display none
 
   .bottom
     position absolute
@@ -67,7 +71,7 @@ header
     li
       list-style none
 
-      @media screen and (max-height 600px)
+      @media screen and (min-height: 368px) and (max-height: 500px)
         display none
 
 

@@ -59,12 +59,14 @@ header .center {
   top: 50%;
   transform: translateY(-50%);
 }
-@media screen and (max-height: 600px) and (max-width: 768px) {
-  header .center {
-    margin-top: 60px;
+@media screen and (max-width: 768px) {
+  header .center .logo {
+    max-width: 200px;
   }
-  header .center ^ {
-    height: calc(100vh - 60px);
+}
+@media screen and (max-height: 368px) {
+  header .center .logo {
+    display: none;
   }
 }
 header .bottom {
@@ -75,7 +77,7 @@ header .bottom {
 header .bottom li {
   list-style: none;
 }
-@media screen and (max-height: 600px) {
+@media screen and (min-height: 368px) and (max-height: 500px) {
   header .bottom li {
     display: none;
   }

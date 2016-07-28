@@ -1,12 +1,29 @@
 /*eslint no-console:0*/
-/*global jQuery, $*/
+/*global $, mobilecheck*/
 'use strict';
 
-let bg = jQuery('header');
 
-function resizeBackground() {
-  bg.height(jQuery(window).height());
-}
+// mobile resizing
+(function () {
+  let bg = $('header');
+  let ogHeight = bg.height();
+  let ogWidth = bg.width();
+
+  function resizeBackground() {
+    if (bg.width() !== ogWidth) {
+      ogWidth = bg.width();
+      ogHeight = $(window).height();
+    }
+    return bg.height(ogHeight);
+  }
+
+  $(document).ready(() => {
+    if (mobilecheck()) {
+      $(window).resize(resizeBackground);
+      resizeBackground();
+    }
+  });
+})();
 
 
 // video handling
@@ -36,11 +53,6 @@ function resizeBackground() {
       $('#bg-vid .video-controls .pause').attr('hidden', '');
       $('#bg-vid .video-controls .play').removeAttr('hidden');
     };
-
-  if (screen.width <= 420) {
-    jQuery(window).resize('resizeBackground');
-    resizeBackground();
-  }
 
   if (screen.width >= 800) {
     let preference = localStorage.getItem(LS_PLAY_PREF);

@@ -1,12 +1,29 @@
 /*eslint no-console:0*/
-/*global jQuery, $*/
+/*global $, mobilecheck*/
 'use strict';
 
-var bg = jQuery('header');
+// mobile resizing
 
-function resizeBackground() {
-  bg.height(jQuery(window).height());
-}
+(function () {
+  var bg = $('header');
+  var ogHeight = bg.height();
+  var ogWidth = bg.width();
+
+  function resizeBackground() {
+    if (bg.width() !== ogWidth) {
+      ogWidth = bg.width();
+      ogHeight = $(window).height();
+    }
+    return bg.height(ogHeight);
+  }
+
+  $(document).ready(function () {
+    if (mobilecheck()) {
+      $(window).resize(resizeBackground);
+      resizeBackground();
+    }
+  });
+})();
 
 // video handling
 (function () {
@@ -35,11 +52,6 @@ function resizeBackground() {
     $('#bg-vid .video-controls .pause').attr('hidden', '');
     $('#bg-vid .video-controls .play').removeAttr('hidden');
   };
-
-  if (screen.width <= 420) {
-    jQuery(window).resize('resizeBackground');
-    resizeBackground();
-  }
 
   if (screen.width >= 800) {
     var preference = localStorage.getItem(LS_PLAY_PREF);
