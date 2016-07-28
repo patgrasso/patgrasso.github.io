@@ -1,6 +1,7 @@
 /*global jQuery, $*/
+'use strict';
 
-let bg = jQuery('header');
+var bg = jQuery('header');
 
 function resizeBackground() {
   bg.height(jQuery(window).height());
@@ -11,7 +12,7 @@ function resizeBackground() {
 (function () {
   const LS_PLAY_PREF = 'videoPlayPreference';
 
-  let stopVideo = () => {
+  var stopVideo = () => {
       $('#bg-vid video')[0].pause();
       $('#bg-vid video').hide();
       $('#bg-vid .video-controls .stop').attr('hidden', 'hidden');
@@ -43,7 +44,7 @@ function resizeBackground() {
   }
 
   if (screen.width >= 800) {
-    let preference = localStorage.getItem('videoPlayPreference');
+    var preference = localStorage.getItem('videoPlayPreference');
 
     if (preference == null) {
       localStorage.setItem('videoPlayPreference', 'on');
