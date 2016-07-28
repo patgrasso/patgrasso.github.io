@@ -60,3 +60,27 @@ function resizeBackground() {
     $('#bg-vid .stop').click(stopVideo);
   }
 })();
+
+// setup on-scroll opacity change to the down arrows at the bottom of the header
+(function () {
+  var FADE_LENGTH = 300;
+  var TRANSLATE_FACTOR = 3;
+  var arrows;
+  var bottom;
+  var body;
+
+  $(document).ready(function () {
+    bottom = $('header .bottom');
+    arrows = $('header .bottom img');
+    body = document.body;
+  });
+
+  $(document).on('scroll touchmove', function () {
+    arrows && arrows.css({
+      opacity: 1 - body.scrollTop / FADE_LENGTH
+    });
+    bottom && bottom.css({
+      bottom: -(body.scrollTop / TRANSLATE_FACTOR)
+    });
+  });
+})();
