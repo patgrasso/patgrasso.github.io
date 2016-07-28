@@ -1,7 +1,7 @@
 /*global jQuery, $*/
 'use strict';
 
-var bg = jQuery('header');
+let bg = jQuery('header');
 
 function resizeBackground() {
   bg.height(jQuery(window).height());
@@ -10,21 +10,19 @@ function resizeBackground() {
 
 // video handling
 (function () {
-  var LS_PLAY_PREF = 'videoPlayPreference';
+  const LS_PLAY_PREF = 'videoPlayPreference';
 
-  var stopVideo = () => {
+  let stopVideo = () => {
       $('#bg-vid video')[0].pause();
       $('#bg-vid video').hide();
       $('#bg-vid .video-controls .stop').attr('hidden', 'hidden');
       $('#bg-vid .video-controls .pause').attr('hidden', '');
       $('#bg-vid .video-controls .play').removeAttr('hidden');
-      //$('body, main, header').css('background-color', 'transparent');
       $('body').addClass('hide-video');
       localStorage.setItem(LS_PLAY_PREF, 'off');
     }
     , playVideo = () => {
       $('#bg-vid video').show();
-      //$('body, main, header').css('background-color', 'rgba(0, 0, 0, .4)');
       $('body').removeClass('hide-video');
       $('#bg-vid video')[0].play();
       $('#bg-vid .video-controls .play').attr('hidden', '');
@@ -44,7 +42,7 @@ function resizeBackground() {
   }
 
   if (screen.width >= 800) {
-    var preference = localStorage.getItem(LS_PLAY_PREF);
+    let preference = localStorage.getItem(LS_PLAY_PREF);
 
     if (preference == null) {
       localStorage.setItem(LS_PLAY_PREF, 'on');
