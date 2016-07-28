@@ -1,0 +1,59 @@
+section#contact.container
+  div.row
+    div.col-lg-12.text-center
+      h2 Contact Me
+      hr.star-light
+    div.col-lg-8.col-lg-offset-2
+      form#contact-form(
+        name='send-message'
+        action='https://formspree.io/pgrasso@stevens.edu'
+        method='POST'
+      )
+        // Name
+        div.row.control-group
+          div.form-group.col-xs-12.floating-label-form-group.controls
+            label Name
+            input#name.form-control(
+              type='text'
+              name='name'
+              placeholder='Name'
+              required
+              data-validation-required-message='Please enter your name.'
+            )
+            p.help-block.text-danger
+
+        // Email
+        div.row.control-group
+          div.form-group.col-xs-12.floating-label-form-group.controls
+            label Email
+            input#email.form-control(
+              type='email'
+              name='_replyto'
+              placeholder='Email'
+              required
+              data-validation-required-message='Please enter your email address.'
+            )
+            p.help-block.text-danger
+
+        // Message
+        div.row.control-group
+          div.form-group.col-xs-12.floating-label-form-group.controls
+            label Message
+            textarea#message.form-control(
+              name='message'
+              placeholder='Message'
+              rows='5'
+            )
+
+        // SEND!
+        div.row
+          div.form-group.col-xs.12
+            button.submit.btn.btn-lg(type='submit') Send
+            span.status.success(hidden)
+              i.fa.fa-check
+              | Got the message!
+            span.status.failure(hidden)
+              i.fa.fa-times
+              | Hm... something's broken. Here, try this instead:
+              a.underline(target='_blank' href='mailto:pgrasso@stevens.edu')
+                | pgrasso@stevens.edu

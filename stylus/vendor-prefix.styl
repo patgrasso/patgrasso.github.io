@@ -1,0 +1,19 @@
+
+vendors = webkit, moz, ms, o
+
+// Vendor prefix property
+vendor(property, value)
+  {property} value
+  for vendor in vendors
+    -{vendor}-{property} value
+
+
+// Vendor prefix pseudo-selector (e.g. input::-webkit-input-placeholder)
+vendor-pseudo(props...)
+  for prop in props
+    for vendor in vendors
+      &::-{vendor}-{prop}
+        {block}
+      &:-{vendor}-{prop}
+        {block}
+

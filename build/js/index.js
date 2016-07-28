@@ -1,3 +1,4 @@
+/*eslint no-console:0*/
 /*global jQuery, $*/
 'use strict';
 
@@ -81,6 +82,37 @@ function resizeBackground() {
     });
     bottom && bottom.css({
       bottom: -(body.scrollTop / TRANSLATE_FACTOR)
+    });
+  });
+})();
+
+// handle contact form submission
+(function () {
+  $('#contact-form').submit(function (event) {
+    var form = {};
+
+    event.preventDefault();
+
+    $(event.target).find('.form-control').each(function (i, input) {
+      form[input.name] = input.value;
+    });
+
+    $('#contact-form .status').attr('hidden', '');
+
+    $.ajax({
+      url: event.target.action,
+      method: event.target.method,
+      data: form,
+      dataType: 'json',
+      success: function success(data) {
+        $('#contact-form .status.success').removeAttr('hidden');
+        $('#contact-form button.submit').attr('disabled', '');
+        console.log(data);
+      },
+      error: function error(data) {
+        $('#contact-form .status.failure').removeAttr('hidden');
+        console.log(data);
+      }
     });
   });
 })();

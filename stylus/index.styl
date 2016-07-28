@@ -1,6 +1,8 @@
+@require 'vendor-prefix.styl'
 
 primary   = #388e3c
 secondary = #ffa000
+text-red  = #d32f2f
 
 body, main, header
   background-color rgba(0, 0, 0, .4)
@@ -182,5 +184,55 @@ hr.star-light
 
 #kitti
   background-color #8e24aa
+
+
+
+// contact
+form
+  .row:first-child .floating-label-form-group,
+  .form-group
+    border-color rgba(255, 255, 255, .4)
+
+  .floating-label-form-group-with-focus label,
+  .form-control
+    color #fff
+
+    color #fff
+
+    +vendor-pseudo(placeholder, input-placeholder)
+      color rgba(255, 255, 255, .5)
+
+  button[type='submit']
+    margin 15px
+
+    &, &:hover, &:active, &:focus
+      border 2px solid #fff
+      background-color transparent
+      color #fff
+
+  .status
+    i
+      font-size 18px
+      text-align middle
+      margin-right 5px
+    font-size 16px
+    vertical-align middle
+
+  .failure i
+    color text-red
+
+  .success i
+    color primary
+
+    /.hide-video &
+      color #fff
+
+  a.underline
+    margin 0 4px
+    font-weight 600
+
+    &:hover
+      color #fff
+      text-decoration underline
 
 
