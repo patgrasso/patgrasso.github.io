@@ -43,17 +43,37 @@ nav
         background-color secondary
         color #fff
 
+// header
 header
   height 100vh
+  position relative
   .center
     position relative
     top 50%
     transform translateY(-50%)
 
+    @media screen and (max-height: 600px) and (max-width: 768px)
+      margin-top 60px
+      ^
+        height calc(100vh - 60px)
+
+  .bottom
+    position absolute
+    bottom 0
+    width 100%
+
+    li
+      list-style none
+
+      @media screen and (max-height 600px)
+        display none
+
+
 .profile-icon
   color #fff
   font-size 50px
   margin 15px
+
 
 
 // background video
@@ -87,6 +107,8 @@ header
       &:hover
         cursor pointer
 
+main
+  padding-top 30px
 
 // sections
 section *
@@ -122,11 +144,17 @@ hr.star-light
   width auto
 
   .title
-    text-align center
+    //text-align center
     margin-top 0
 
     a:hover, a:focus
       color #fff
+
+  .github-link
+    position absolute
+    top 18px
+    right 18px
+    font-size 20px
 
 #boxchat
   background-color #e64a19
@@ -134,13 +162,19 @@ hr.star-light
 #nyota
   background-color #388e3c
 
-  @media screen and (max-device-width: 800px)
+  hide-dat-video =
     border 2px solid #fff
     padding 13px
+    .github-link
+      top 16px
+      right 16px
+
+
+  @media screen and (max-device-width: 800px)
+    {hide-dat-video}
 
   /.hide-video &
-    border 2px solid #fff
-    padding 13px
+    {hide-dat-video}
 
 #journ
   background-color #039be5

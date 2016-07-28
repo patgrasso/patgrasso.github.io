@@ -52,11 +52,33 @@ nav span {
 }
 header {
   height: 100vh;
+  position: relative;
 }
 header .center {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+@media screen and (max-height: 600px) and (max-width: 768px) {
+  header .center {
+    margin-top: 60px;
+  }
+  header .center ^ {
+    height: calc(100vh - 60px);
+  }
+}
+header .bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+header .bottom li {
+  list-style: none;
+}
+@media screen and (max-height: 600px) {
+  header .bottom li {
+    display: none;
+  }
 }
 .profile-icon {
   color: #fff;
@@ -95,6 +117,9 @@ header .center {
 #bg-vid .video-controls i:hover {
   cursor: pointer;
 }
+main {
+  padding-top: 30px;
+}
 section * {
   color: #fff;
 }
@@ -126,12 +151,17 @@ hr.star-light:after {
   width: auto;
 }
 .project-item .title {
-  text-align: center;
   margin-top: 0;
 }
 .project-item .title a:hover,
 .project-item .title a:focus {
   color: #fff;
+}
+.project-item .github-link {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 20px;
 }
 #boxchat {
   background-color: #e64a19;
@@ -144,10 +174,18 @@ hr.star-light:after {
     border: 2px solid #fff;
     padding: 13px;
   }
+  #nyota .github-link {
+    top: 16px;
+    right: 16px;
+  }
 }
 .hide-video #nyota {
   border: 2px solid #fff;
   padding: 13px;
+}
+.hide-video #nyota .github-link {
+  top: 16px;
+  right: 16px;
 }
 #journ {
   background-color: #039be5;
