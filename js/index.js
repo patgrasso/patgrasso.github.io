@@ -10,7 +10,7 @@ function resizeBackground() {
 
 // video handling
 (function () {
-  const LS_PLAY_PREF = 'videoPlayPreference';
+  var LS_PLAY_PREF = 'videoPlayPreference';
 
   var stopVideo = () => {
       $('#bg-vid video')[0].pause();
@@ -44,10 +44,10 @@ function resizeBackground() {
   }
 
   if (screen.width >= 800) {
-    var preference = localStorage.getItem('videoPlayPreference');
+    var preference = localStorage.getItem(LS_PLAY_PREF);
 
     if (preference == null) {
-      localStorage.setItem('videoPlayPreference', 'on');
+      localStorage.setItem(LS_PLAY_PREF, 'on');
       preference = 'on';
     }
 
