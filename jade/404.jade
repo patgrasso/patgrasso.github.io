@@ -15,18 +15,17 @@ html(lang='en-US')
     link(rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet' href='/vendor/freelancer/css/freelancer.min.css')
-    block css
+    link(rel='stylesheet' href='/css/404.css')
   body#page-top.index
-    include nav
-    block content
+    header
+      div.center
+        div.intro-text
+          span.name Hm...
+          a.home(href='/'): i.fa.fa-home
 
-    script(type='text/javascript' src='bower_components/jquery/dist/jquery.min.js')
-    script(
-      type='text/javascript'
-      src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
-    )
-    script(type='text/javascript' src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
-    script(type='text/javascript' src='/vendor/freelancer/js/jqBootstrapValidation.js')
-    script(type='text/javascript' src='/vendor/freelancer/js/contact_me.js')
-    script(type='text/javascript' src='/vendor/freelancer/js/freelancer.min.js')
-    block scripts
+    script(type='text/javascript' src='/bower_components/jquery/dist/jquery.min.js')
+    script.
+      $('.intro-text .name').after($('<span>', {
+        class: 'skills',
+        text: `What the hell is ${document.location.pathname}?`
+      }));

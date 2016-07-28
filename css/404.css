@@ -194,3 +194,15 @@ hr.star-light:after {
 #kitti {
   background-color: #8e24aa;
 }
+body,
+main,
+header {
+  background-color: #388e3c;
+}
+a.home {
+  display: block;
+  font-size: 50px;
+  color: #fff;
+  width: 60px;
+  margin: auto;
+}

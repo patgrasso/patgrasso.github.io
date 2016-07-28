@@ -7,7 +7,8 @@ const babel   = require('gulp-babel');
 const del     = require('del');
 
 let   views   = [
-  'index'
+  'index',
+  '404'
 ];
 let templates = views.map((name) => `jade/${name}.jade`);
 

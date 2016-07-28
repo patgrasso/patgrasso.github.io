@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
-    <title>Custom 404!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pat Grasso</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/freelancer/css/freelancer.min.css">
+    <link rel="stylesheet" href="/css/404.css">
   </head>
-  <body>
-    Whatever you're looking for, it's not here!
+  <body id="page-top" class="index">
+    <header>
+      <div class="center">
+        <div class="intro-text"><span class="name">Hm...</span><a href="/" class="home"><i class="fa fa-home"></i></a></div>
+      </div>
+    </header>
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+      $('.intro-text .name').after($('<span>', {
+        class: 'skills',
+        text: `What the hell is ${document.location.pathname}?`
+      }));
+    </script>
   </body>
 </html>
